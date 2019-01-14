@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Federico Mercurio</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+  <ion-segment [(ngModel)]="tabs">
+    <ion-segment-button value="anagrafica">
+      Anagrafica
+    </ion-segment-button>
+    <ion-segment-button value="stato">
+      Stato
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <div [ngSwitch]="tabs">
+    <ion-list *ngSwitchCase="'anagrafica'">
+      <ion-item>
+        <ion-label>Nome</ion-label>
+        <ion-input type="text" readonly value="Federico Mercurio"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Indirizzo</ion-label>
+        <ion-input type="text" readonly value="via Circumvallazione Esterna 4"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Città</ion-label>
+        <ion-input type="text" readonly value="Napoli"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Provincia</ion-label>
+        <ion-input type="text" readonly value="NA"></ion-input>
+       </ion-item>
+
+       <ion-item>
+          <ion-label>Telefono</ion-label>
+          <ion-input type="text" readonly value="3396307816"></ion-input>
+       </ion-item>
+
+       <ion-item>
+          <ion-label>Area</ion-label>
+          <ion-input type="text" readonly value="CM1"></ion-input>
+       </ion-item>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'stato'">
+      <ion-item>
+         <ion-label>Stato</ion-label>
+         <ion-input type="text" readonly value="In attesa di visita"></ion-input>
+      </ion-item>
+
+      <ion-item>
+         <ion-label>In carico a</ion-label>
+         <ion-input type="text" readonly value="Antonio Natale"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Inserita il</ion-label>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month" disabled></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+         <ion-label>Suggerita da</ion-label>
+         <ion-input type="text" readonly value="Ilorel Parrucchieri"></ion-input>
+      </ion-item>
+
+      <ion-item>
+         <ion-label>Utility di interesse</ion-label>
+         <ion-input type="text" readonly value="GAS"></ion-input>
+      </ion-item>
+
+      <ion-item>
+         <ion-label>Agente refresh</ion-label>
+         <ion-input type="text" readonly value="Ciro Tutisco"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+  </div>
+</ion-content>

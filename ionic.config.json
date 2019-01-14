@@ -1,5 +1,8 @@
 {
   "name": "refreshApp",
-  "integrations": {},
-  "type": "ionic-angular"
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "id": "1df57954"
 }

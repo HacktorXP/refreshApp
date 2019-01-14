@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Venditori</ion-title>
+    <ion-buttons end>
+  <button ion-button icon-only color="royal">
+    <ion-icon name="person-add"></ion-icon>
+  </button>
+</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+  <ion-item-sliding>
+
+  <ion-item>
+    <ion-thumbnail item-start>
+    <img src="assets/imgs/male-user.png">
+    </ion-thumbnail>
+    <h2>Ciro Tutisco</h2>
+    <p>Napoli Nord</p>
+    <!-- <ion-note item-end>Non assegnato</ion-note> !-->
+  </ion-item>
+
+  <ion-item-options side="right">
+    <button ion-button color="light" icon-start (click)="goToAmVendorDetail()">
+      <ion-icon name="eye"></ion-icon>
+      Dettagli
+    </button>
+    <button ion-button color="danger" icon-start (click)="showDeleteConfirm()">
+      <ion-icon name="remove"></ion-icon>
+      Rimuovi
+    </button>
+  </ion-item-options>
+
+  </ion-item-sliding>
+
+  </ion-list>
+</ion-content>

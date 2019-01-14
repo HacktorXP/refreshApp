@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Unica Refresh App</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-fab center middle>
+
+    <button ion-fab color="danger">
+      <ion-icon name="aperture"></ion-icon>
+    </button>
+
+  <ion-fab-list side="top">
+    <button ion-fab color="primary" (click)="goToRefreshListPage()">
+      <ion-icon name="body"></ion-icon>
+      <ion-label>Lista refresh</ion-label>
+    </button>
+  </ion-fab-list>
+  <ion-fab-list side="bottom">
+    <button ion-fab color="primary" (click)="goToRefreshLeadListPage()">
+      <ion-icon name="list-box">
+      <ion-label>Lead caricate</ion-label>
+      </ion-icon>
+    </button>
+  </ion-fab-list>
+
+  </ion-fab>
+
+</ion-content>

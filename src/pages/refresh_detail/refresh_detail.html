@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ettore Amato</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+  <ion-segment [(ngModel)]="tabs">
+    <ion-segment-button value="anagrafica">
+      Anagrafica
+    </ion-segment-button>
+    <ion-segment-button value="fatturazione">
+      Fatturazione
+    </ion-segment-button>
+    <ion-segment-button value="note">
+      Note
+    </ion-segment-button>
+  </ion-segment>
+</ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <div [ngSwitch]="tabs">
+    <ion-list *ngSwitchCase="'anagrafica'">
+      <ion-item>
+        <ion-label>ID Retail</ion-label>
+        <ion-input type="text" readonly value="251"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nome</ion-label>
+        <ion-input type="text" readonly value="Ettore Amato"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Indirizzo</ion-label>
+        <ion-input type="text" readonly value="via Naccherino 4"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Indirizzo</ion-label>
+        <ion-input type="text" readonly value="Napoli"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Provincia</ion-label>
+        <ion-input type="text" readonly value="NA"></ion-input>
+       </ion-item>
+
+       <ion-item>
+          <ion-label>Telefono</ion-label>
+          <ion-input type="text" readonly value="3396307816"></ion-input>
+       </ion-item>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'fatturazione'">
+      <ion-item>
+        <ion-label>Utility attive</ion-label>
+        <ion-input type="text" readonly value="ENRG,GAS"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Data primo contratto</ion-label>
+        <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="event.month" disabled></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Prima Fattura</ion-label>
+        <ion-input type="text" readonly value="Fatt ENRG 981 del 2016-10-01"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Importo Fattura</ion-label>
+        <ion-input type="text" readonly value="€ 185,70"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Venditore</ion-label>
+        <ion-input type="text" readonly value="Antonio Natale"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'note'">
+      <ion-item>
+        <ion-label>Nota</ion-label>
+        <ion-textarea readonly value="Lorem Ipsum dixit etc miao"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label>Rifiutato da</ion-label>
+        <ion-input type="text" readonly value="Antonio Natale"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Nota di rifiuto</ion-label>
+        <ion-textarea readonly value="Lorem Ipsum dixit etc miao bau miaio  miao miao "></ion-textarea>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

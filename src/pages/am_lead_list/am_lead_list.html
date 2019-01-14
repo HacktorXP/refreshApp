@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lead Caricate</ion-title>
+  </ion-navbar>
+
+<ion-toolbar no-border-top>
+<ion-segment [(ngModel)]="tabs">
+  <ion-segment-button value="non_assegnate" icon-start>
+    <ion-icon name="warning"></ion-icon>
+    Non assegnate
+  </ion-segment-button>
+  <ion-segment-button value="assegnate" icon-start>
+    <ion-icon name="checkmark"></ion-icon>
+    Assegnate
+  </ion-segment-button>
+</ion-segment>
+</ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div [ngSwitch]="tabs">
+  <ion-list *ngSwitchCase="'non_assegnate'">
+    <ion-list-header>Oggi</ion-list-header>
+    <ion-item-sliding>
+
+    <ion-item>
+      <h2>Federico Mercurio</h2>
+      <h3>Ref: Ilorel Parrucchieri</h3>
+      <p>via Circumvallazione Esterna 4 Napoli</p>
+      <ion-note item-end>></ion-note>
+    </ion-item>
+
+    <ion-item-options side="right">
+      <button ion-button color="light" icon-start (click)="goToRefreshLeadDetail()">
+        <ion-icon name="eye"></ion-icon>
+        Dettagli
+      </button>
+      <button ion-button color="danger" icon-start (click)="rejectLead()">
+        <ion-icon name="remove-circle"></ion-icon>
+        Rigetta
+      </button>
+      <button ion-button color="primary" icon-start (click)="presentAssignLeadModal()">
+        <ion-icon name="exit"></ion-icon>
+        Assegna
+      </button>
+    </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-list *ngSwitchCase="'assegnate'">
+    <ion-list-header>Oggi</ion-list-header>
+    <ion-item-sliding>
+
+    <ion-item>
+      <h2>Roberto Pianta</h2>
+      <h3>Ref: Ilorel Parrucchieri</h3>
+      <p>Assegnata a: Ciro Tutisco</p>
+      <ion-note item-end>In attesa di visita</ion-note>
+    </ion-item>
+
+    <ion-item-options side="right">
+      <button ion-button color="light" icon-start (click)="goToRefreshLeadDetail()">
+        <ion-icon name="eye"></ion-icon>
+        Dettagli
+      </button>
+    </ion-item-options>
+
+    </ion-item-sliding>
+  </ion-list>
+
+    </div>
+</ion-content>

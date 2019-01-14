@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Lista Refresh</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-list-header>Oggi</ion-list-header>
+    <ion-item-sliding>
+
+    <ion-item>
+      <h2>
+        <ion-icon name="bulb"></ion-icon>
+        <ion-icon name="flame"></ion-icon>
+        Ettore Amato</h2>
+      <p>via Naccherino 4</p>
+      <ion-note item-end>Napoli NA</ion-note>
+    </ion-item>
+
+    <ion-item-options side="right">
+      <button ion-button color="light" icon-start (click)="goToRefreshDetail()">
+        <ion-icon name="eye"></ion-icon>
+        Dettagli
+      </button>
+      <button ion-button color="danger" icon-start (click)="presentDownloads()">
+        <ion-icon name="cloud-download"></ion-icon>
+        Documenti
+      </button>
+      <button ion-button color="primary" icon-start (click)="goToRefreshVisit()">
+        <ion-icon name="briefcase"></ion-icon>
+        Visita
+      </button>
+    </ion-item-options>
+
+    <ion-item-options side="left">
+      <button ion-button color="secondary" icon-start (click)="presentCalls()">
+        <ion-icon name="call"></ion-icon>
+        Call
+      </button>
+    </ion-item-options>
+
+    </ion-item-sliding>
+
+    <ion-item-sliding>
+
+    <ion-item>
+      <h2>
+        <ion-icon name="bulb"></ion-icon>
+        Bruno Salzano</h2>
+      <p>Via Pietro Musone</p>
+      <ion-note item-end>Casapulla CE</ion-note>
+    </ion-item>
+
+    <ion-item-options side="right">
+      <button ion-button color="light" icon-start>
+        <ion-icon name="eye"></ion-icon>
+        Dettagli
+      </button>
+      <button ion-button color="danger" icon-start>
+        <ion-icon name="cloud-download"></ion-icon>
+        Documenti
+      </button>
+      <button ion-button color="primary" icon-start>
+        <ion-icon name="briefcase"></ion-icon>
+        Visita
+      </button>
+    </ion-item-options>
+
+    <ion-item-options side="left">
+      <button ion-button color="secondary" icon-start (click)="presentCalls()">
+        <ion-icon name="call"></ion-icon>
+        Call
+      </button>
+    </ion-item-options>
+
+    </ion-item-sliding>
+
+  </ion-list>
+</ion-content>

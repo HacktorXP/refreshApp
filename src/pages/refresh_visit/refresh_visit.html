@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Esita visita</ion-title>
+  </ion-navbar>
+
+
+
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-label>Visitato il</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Esito visita</ion-label>
+        <ion-select [(ngModel)]="esito" interface="popover">
+          <ion-option value="0">KO</ion-option>
+          <ion-option value="1">OK</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Nota</ion-label>
+        <ion-textarea></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+      <button ion-button full large>Carica Lead</button>
+      </ion-item>
+
+    </ion-list>
+</ion-content>
